@@ -1,0 +1,213 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+}
+
+/* Table Format */
+.table-container {
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Background Video */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-container iframe {
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+}
+
+/* pictures */
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.image-grid img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/* Navigation Bar */
+nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 200px;
+    background: #007BFF;
+    color: white;
+    padding-top: 2rem;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0 1rem;
+}
+
+nav ul li {
+    margin: 1rem 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+nav ul li a.active {
+    font-weight: bold;
+    background-color: #0056b3;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+/* Main Content */
+main {
+    margin-right: 220px;
+    padding: 2rem;
+    flex-grow: 1;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #0056b3;
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    color: #0056b3;
+    margin-bottom: 1rem;
+}
+
+/* Image Styling */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 10px;
+}
+
+/* Embedded Content (YouTube, Spotify) */
+iframe {
+    display: block;
+    margin: 1rem auto;
+    border-radius: 12px;
+}
+
+/* List Styling */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+/* Saga Song Lists - Indented Bullet Points */
+.saga-list {
+    margin-bottom: 2rem;
+}
+
+.saga-list ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.saga-list li {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.saga-list li ul {
+    list-style-type: disc;
+    padding-left: 30px;
+}
+
+.saga-list li ul li {
+    font-weight: normal;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    nav {
+        position: static;
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    main {
+        margin-right: 0;
+        padding: 1rem;
+    }
+}
